@@ -16,7 +16,7 @@ class Estudiante(models.Model):
 class Profesor(models.Model):
     nombre = models.CharField(max_length=60)
     apellido = models.CharField(max_length=60)
-    correo = models.EmailField()
+    email = models.EmailField()
     profesion = models.CharField(max_length=60)
 
 class Entregable(models.Model):
@@ -28,6 +28,16 @@ class Familiares(models.Model):
     edad = models.IntegerField()
     nacimiento = models.DateField()   
 
+class Semillas(models.Model):
+    nombre = models.CharField(max_length=60)
+
+class Plantas(models.Model):
+    nombre = models.CharField(max_length=60)
+
+class Macetas(models.Model):
+    nombre = models.CharField(max_length=60)
+    modelo = models.IntegerField()
+            
 
 
 

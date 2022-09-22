@@ -1,0 +1,35 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %} 
+
+
+{% block titulo %} 
+
+Bienvenidos a mi página!
+
+
+{% endblock %} 
+
+{% block descripcion %} 
+
+<form action="/AppCoder/buscamod/" method="GET">
+
+    <input type="number" name="modelo" id="modelo">
+
+    <input type="submit" value="Buscar">
+
+</form> 
+
+<p> Se está buscando el modelo de maceta {{modelo}}</p>
+
+    {% for maceta in maceta %} 
+
+        <p>Nombre: {{maceta.nombre}} ---- Modelo: {{maceta.modelo}}   </p>
+
+
+
+    {% endfor %} 
+
+
+{% endblock %}
